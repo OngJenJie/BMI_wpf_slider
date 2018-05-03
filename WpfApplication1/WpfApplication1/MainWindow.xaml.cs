@@ -24,5 +24,11 @@ namespace WpfApplication1
         {
             InitializeComponent();
         }
+
+        private void HeightSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            double Value = Math.Round(HeightSlider.Value, 2);
+            HeightNumber.Text = HeightSlider.Value.ToString();
+        }
     }
 }

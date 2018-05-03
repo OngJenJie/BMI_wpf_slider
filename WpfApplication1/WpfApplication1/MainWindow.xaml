@@ -10,10 +10,12 @@
         <StackPanel Margin="20" Width="400">
             <!-- Height -->
             <Canvas Width="400" Height="50" Background="Chocolate">
-                <TextBlock Canvas.Top="0" Canvas.Left="0">100</TextBlock>
-            </Canvas>
+                <Border CornerRadius="10" Background="Orange">
+                    <TextBlock Canvas.Top="0" Canvas.Left="0" x:Name="HeightNumber" Width="80" TextAlignment="Center" Padding="0 5">100</TextBlock>
+                 </Border>
+             </Canvas>
         
-            <Slider ></Slider>
+            <Slider Minimum="0" Maximum="200" x:Name="HeightSlider" ValueChanged="HeightSlider_ValueChanged"></Slider>
             
             <!-- Weight -->
             <TextBlock>100</TextBlock>
