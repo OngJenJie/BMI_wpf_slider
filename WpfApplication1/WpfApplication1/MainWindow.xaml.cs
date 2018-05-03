@@ -50,7 +50,17 @@ namespace WpfApplication1
             double h = double.Parse(HeightNumber.Text);
             double w = double.Parse(WeightNumber.Text);
             double bmi = w / Math.Pow((h / 100), 2);
-            BmiNumber1.Text = Math.Round((bmi),2).ToString() ;
+            string[] parts = Math.Round(bmi,1).ToString().Split('.');
+            BmiNumber1.Text = parts[0];
+            if(parts.Length > 1)
+            {
+                BmiNumber2.Text ="." +parts[1];
+            }
+            else
+            {
+                BmiNumber2.Text = ".0";
+            }
+
         }
     }
 }
