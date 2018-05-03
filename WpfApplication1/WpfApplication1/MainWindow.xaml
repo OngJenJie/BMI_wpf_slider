@@ -7,18 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <StackPanel Margin="20">
-            
+        <StackPanel Margin="20" Width="400">
             <!-- Height -->
-            <TextBlock Margin="10 10 10 10" FontSize="18">100</TextBlock>
-            <Slider Margin="10 10 10 10"></Slider>
+            <Canvas Width="400" Height="50" Background="Chocolate">
+                <TextBlock Canvas.Top="0" Canvas.Left="0">100</TextBlock>
+            </Canvas>
+        
+            <Slider ></Slider>
             
             <!-- Weight -->
-            <TextBlock Margin="10 10 10 10" FontSize="18">100</TextBlock>
-            <Slider Margin="10 10 10 10"></Slider>
+            <TextBlock>100</TextBlock>
+            <Slider></Slider>
             
             <!-- BMI -->
-            <TextBlock Margin="10 10 10 10" FontSize="30">0</TextBlock>
+            <TextBlock>0</TextBlock>
         </StackPanel>
     </Grid>
 </Window>
