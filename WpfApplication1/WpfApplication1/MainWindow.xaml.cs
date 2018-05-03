@@ -27,8 +27,30 @@ namespace WpfApplication1
 
         private void HeightSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            double Value = Math.Round(HeightSlider.Value, 2);
-            HeightNumber.Text = HeightSlider.Value.ToString();
+            // number
+            double value = Math.Round(HeightSlider.Value,1);
+            HeightNumber.Text = value.ToString();
+
+            // place
+            double v = (value / 200) * 320;
+            Canvas.SetLeft(Height,v);
+        }
+
+        private void WeightSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            // number
+            double value = Math.Round(WeightSlider.Value, 1);
+            WeightNumber.Text = value.ToString();
+
+            // place
+            double v = (value / 200) * 320;
+            Canvas.SetLeft(Weight,v);
+
+            // BMI calculation
+            double h = double.Parse(HeightNumber.Text);
+            double w = double.Parse(WeightNumber.Text);
+            double bmi = w / Math.Pow((h / 100), 2);
+            BmiNumber1.Text = Math.Round((bmi),2).ToString() ;
         }
     }
 }
